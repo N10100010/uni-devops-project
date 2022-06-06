@@ -1,0 +1,3 @@
+[submodule "TestApp/uni_devops_project_app"]
+	path = TestApp/uni_devops_project_app
+	url = https://github.com/N10100010/uni_devops_project_app.git
