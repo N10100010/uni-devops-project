@@ -4,7 +4,7 @@ services:
     build: .
     command:
       - /start.sh
-    container_name: docker.test
+    container_name: ${APP_CONTAINER_NAME}
     entrypoint:
       - /entrypoint.sh
     environment:
@@ -29,7 +29,7 @@ services:
       - STATIC_INDEX=0
       - PYTHONPATH=/app
     hostname: af39222d8bd2
-    image: docker.test
+    image: ${APP_IMAGE_NAME}
     ipc: private
     logging:
       driver: json-file
