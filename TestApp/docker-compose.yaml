@@ -5,6 +5,7 @@ services:
     command:
       - /start.sh
     container_name: ${APP_CONTAINER_NAME}
+    image: ${APP_IMAGE_NAME}:${APP_IMAGE_TAG}
     entrypoint:
       - /entrypoint.sh
     environment:
@@ -29,7 +30,6 @@ services:
       - STATIC_INDEX=0
       - PYTHONPATH=/app
     hostname: af39222d8bd2
-    image: ${APP_IMAGE_NAME}
     ipc: private
     logging:
       driver: json-file
