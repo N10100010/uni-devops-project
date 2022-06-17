@@ -1,6 +1,6 @@
 version: "3"
 services:
-  docker.test:
+  application_showcase:
     build: .
     command:
       - /start.sh
@@ -12,12 +12,6 @@ services:
       - PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
       - LANG=C.UTF-8
       - GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
-      - PYTHON_VERSION=3.8.12
-      - PYTHON_PIP_VERSION=21.2.4
-      - PYTHON_SETUPTOOLS_VERSION=57.5.0
-      - PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/3cb8888cc2869620f57d5d2da64da38f516078c7/public/get-pip.py
-      - PYTHON_GET_PIP_SHA256=c518250e91a70d7b20cceb15272209a4ded2a0c263ae5776f129e0d9b5674309
-      - UWSGI_PLUGIN=python3
       - UWSGI_INI=/app/uwsgi.ini
       - UWSGI_CHEAPER=2
       - UWSGI_PROCESSES=16
