@@ -1,5 +1,5 @@
  #!/bin/bash
-app="docker.test"
+app="devops_showcase_app"
 docker build -t ${app} .
 docker run -d -p \
   --name=${app} \
